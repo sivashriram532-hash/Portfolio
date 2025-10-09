@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SHRIRAM S</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="profile-container">
+                <div class="hero-text">
+                    <h1>SHRIRAM S</h1>
+                    <p>Full Stack Developer & UI/UX Designer</p>
+                    <p class="hero-description">
+                        Passionate developer with expertise in modern web technologies. I love creating 
+                        innovative solutions and bringing ideas to life through clean, efficient code.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>B.Tech in Computer Science and Engineering</h4>
+                        <p>SRM Institute of Science and Technology, Chennai</p>
+                        <p>CGPA: 8.5/10</p>
+                        <p>2024-2027</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Higher Secondary School - Science Stream</h4>
+                        <p>Everwin matriculation, Chennai</p>
+                        <p>Percentage: 80%</p>
+                        <p>2022-2024</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Secondary School</h4>
+                        <p>Evervin matriculation, Chennai</p>
+                        <p>Percentage: 87%</p>
+                        <p>2020-2022</p>
+                    </div>
+                </div>
+
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <span class="skill-name">Programming Languages:</span>
+                            <span>Python, JavaScript, Java, C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Web Technologies:</span>
+                            <span>HTML, CSS, React.js, Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Databases:</span>
+                            <span>MongoDB, MySQL, PostgreSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Tools & Frameworks:</span>
+                            <span>Git, Docker, Express.js, Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>BANK MANAGMENT SYSTEM</h3>
+                        <p>A full-stack Bank Management System built with React, Node.js, and MongoDB for secure customer account handling, transactions, and loan management.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Pharmacy database management system</h3>
+                        <p>Pharmacy Database Management System: A software solution to efficiently manage medicines, suppliers, customers, sales, and inventory in a pharmacy.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">Socket.io</span>
+                        </div>
+                        <a href="#" class="project-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Get in Touch</h3>
+                        <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> sivashriram532@gmail.com
+                    </div>
+                    <div class="contact-item">
+                        <strong>Location:</strong> Chennai, India
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active navigation highlight
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
